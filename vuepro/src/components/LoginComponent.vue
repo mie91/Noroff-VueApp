@@ -22,8 +22,22 @@
 <script>
 export default {
     name: 'Login',
-    props: {
-        message: String
+    props: ['message', 'showUsernameError', 'showPasswordError', 'inputUsernameError', 'inputPasswordError'],
+    methods: {
+        login: function(){
+            const app = this;
+            app.$emit('clicked', this.username, this.password);
+        }
     }
 }
 </script>
+
+<style scoped>
+    .error {
+        color: magenta;
+    }
+
+    .error-border{
+        border: solid 3px magenta;
+    }
+</style>
