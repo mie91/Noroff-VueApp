@@ -5,7 +5,7 @@
             <div>
                 <h3>{{message}}</h3>
             </div>
-            <form>
+            <form class="theForm">
                 <input type="text" placeholder="Username" v-model="username" v-bind:class="{ 'error-border': inputUsernameError }" class="[ form-control ]" />
                 <div class="[ error ]" v-if="showUsernameError"> Please enter the correct username</div>
                 <br>
@@ -33,11 +33,23 @@ export default {
 </script>
 
 <style scoped>
+
+
     .error {
-        color: magenta;
+        color: darkred;
+        font-size: 14px;
+        padding: 0px;
+        margin: 0px;     
+    }
+    .error-border{
+        border: solid 3px darkred;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    .theForm {
+        background-color: darkgray;
+        padding: 15px;
     }
 
-    .error-border{
-        border: solid 3px magenta;
-    }
+   
 </style>
