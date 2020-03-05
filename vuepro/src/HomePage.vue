@@ -38,7 +38,7 @@ export default {
                     this.inputUsernameError = false;
                 }
                 if(password !== localStorage.getItem("password")){
-                    this.message = "Please enter correct login info";
+                    this.message = "Wrong login details";
                     this.showPasswordError = true;
                     this.inputPasswordError = true;
                 }

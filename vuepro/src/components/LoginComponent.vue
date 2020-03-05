@@ -12,7 +12,7 @@
                 <input type="password" placeholder="Password" v-model="password" v-bind:class="{ 'error-border': inputPasswordError }" class="form-control" />
                 <div class="error" v-if="showPasswordError"> Incorrect password</div>
                 <br>
-                <button type="button" v-on:click="login" class="btn btn-success">Enter</button>
+                <button type="button" v-on:click="login" class="btn btn-info">Enter</button>
             </form>
         </div>
         <div class="[ col-sm-4 ]"></div>
@@ -47,10 +47,12 @@ export default {
         padding: 5px;
     }
     .theForm {
-        background-color: darkgray;
+        background-color: lightgray;
+        border: solid teal 3px;
         padding: 25px;
         border-radius: 10px;
     }
+
 
    
 </style>

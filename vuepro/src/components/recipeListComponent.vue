@@ -1,14 +1,11 @@
 <template>
-<div class="[ card ]">
-    <div class="[ row ]">
-        <div class="[ col-sm-4 ]"></div>
-        <div class="[ col-sm-4 ]"></div>
-        </div>
-            <div class="[ card--information ]"><br>
-                <b>Title:</b>{{title}}<br>
-                <b>Link: </b><a :href="link" target="_blank">Click Here</a><br />
+<div class="card">
+        <div class="col-sm-4"></div>
+            <div class="card--information"><br>
+                <h3>{{title}}</h3><br>
+                <img :src="thumb"><br>
                 <b>Ingredients:</b>{{ ingredients }}<br>
-                <b>Image:<img :src="thumb"/><br /></b>         
+                <a class="btn btn-info" :href="link" target="_blank">More details</a><br>         
             </div>
         </div>
     
@@ -22,16 +19,14 @@ export default {
 </script>
 
 <style scoped>
-    .card {
-        border: solid 3px teal;
-        border-radius: 4px;
-        padding: 0px 20px 30px;
-        margin-top: 30px;
-    }
-
+ .card {
+     margin: 10px;
+     padding: 20px;;
+ }
     .card img {
         width: 100%;
         padding-top: 20px;
+        border: solid teal 2px;
     }
 
     .card span {
