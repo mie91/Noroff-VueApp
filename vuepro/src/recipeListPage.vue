@@ -4,8 +4,7 @@
                 <recipeListComponent        v-bind:title="recipe.title"
                                             v-bind:ingredients="recipe.ingredients"
                                             v-bind:link="recipe.href"
-                                            v-bind:thumb="recipe.thumbnail"
-                
+                                            v-bind:thumb="recipe.thumbnail"           
             ></recipeListComponent> 
         </div>
     </div>
@@ -37,7 +36,7 @@ export default {
             return response.json();
         })
         .then(function(result){
-            app.recipes = result;
+            app.recipes = result.results;
         });
     }
 }

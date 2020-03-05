@@ -23,6 +23,12 @@
 export default {
     name: 'Login',
     props: ['message', 'showUsernameError', 'showPasswordError', 'inputUsernameError', 'inputPasswordError'],
+    data(){
+        return {
+            username: null,
+            password: null
+        };
+    },
     methods: {
         login: function(){
             const app = this;
@@ -47,10 +53,10 @@ export default {
         padding: 5px;
     }
     .theForm {
-        background-color: lightgray;
-        border: solid teal 3px;
+        border: lightseagreen solid 3px;
+        border-radius: 30px;
         padding: 25px;
-        border-radius: 10px;
+        
     }
 
 

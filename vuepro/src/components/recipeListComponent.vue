@@ -15,21 +15,21 @@
 export default {
     name: 'recipeListComponent',
     props: ['thumb','title', 'link', 'ingredients'],
+
+    
 }
 </script>
 
 <style scoped>
  .card {
      margin: 10px;
-     padding: 20px;;
+     padding: 20px;
+     border: lightseagreen solid 3px;
+     border-radius: 30px;
  }
     .card img {
-        width: 100%;
-        padding-top: 20px;
-        border: solid teal 2px;
+        border-radius: 30px;
+        border: lightseagreen solid 3px;
     }
 
-    .card span {
-        font-weight: bold;
-    }
 </style>
