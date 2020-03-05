@@ -1,9 +1,11 @@
 <template>
-    <div class="[ row ]">
-        <div v-for="recipie in recipies" v-bind:key="recipie" class="[ col-sm-12 ]">
-            <recipeListComponent    v-bind:title="recipie.title"
-                                    v-bind:ingredients="recipie.ingredients"
-            
+    <div class="row">
+        <div v-for="recipe in recipes"    v-bind:key="recipe.id" class="col-sm-6">
+                <recipeListComponent        v-bind:title="recipe.title"
+                                            v-bind:ingredients="recipe.ingredients"
+                                            v-bind:link="recipe.href"
+                                            v-bind:thumb="recipe.thumbnail"
+                
             ></recipeListComponent> 
         </div>
     </div>
@@ -18,7 +20,7 @@ export default {
     },
     data() {
         return {
-            recipies:[]
+            recipes:[]
         }
     },
     beforeMount: function() {
@@ -35,7 +37,7 @@ export default {
             return response.json();
         })
         .then(function(result){
-            app.recipies = result;
+            app.recipes = result;
         })
     }
 }

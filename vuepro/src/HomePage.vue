@@ -18,7 +18,7 @@ export default {
     },
     data() {
         return {
-            message: 'Enter your username and password please',
+            message: 'Log In',
             showUsernameError: false,
             showPasswordError: false,
             inputUsernameError: false,
@@ -50,7 +50,7 @@ export default {
             else{
                 const sessionID = '21312313213';
                 sessionStorage.setItem('sessionID', sessionID);
-                this.$router.push({name:'recipies'});
+                this.$router.push({name:'recipes'});
             }
         }
     },
