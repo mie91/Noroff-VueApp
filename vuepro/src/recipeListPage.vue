@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <div v-for="recipe in recipes"    v-bind:key="recipe.id" class="col-sm-6">
+        <div v-for="recipe in recipes"      v-bind:key="recipe.id" class="col-sm-5 mx-auto">
                 <recipeListComponent        v-bind:title="recipe.title"
                                             v-bind:ingredients="recipe.ingredients"
                                             v-bind:link="recipe.href"
@@ -38,7 +38,7 @@ export default {
         })
         .then(function(result){
             app.recipes = result;
-        })
+        });
     }
 }
 </script>

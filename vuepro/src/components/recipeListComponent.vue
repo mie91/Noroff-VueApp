@@ -5,9 +5,9 @@
         <div class="[ col-sm-4 ]"></div>
         </div>
             <div class="[ card--information ]"><br>
-                <h2>Title:</h2><br>
+                <b>Title:</b>{{title}}<br>
                 <b>Link: </b><a :href="link" target="_blank">Click Here</a><br />
-                <b>Ingredients:</b>{{ingredients}}<br>
+                <b>Ingredients:</b>{{ ingredients }}<br>
                 <b>Image:<img :src="thumb"/><br /></b>         
             </div>
         </div>
