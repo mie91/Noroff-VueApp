@@ -21,8 +21,10 @@ npm run lint
 ```
 
 ### Login info
+```
 Login name: Teacher
 Password: noroff
+```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
